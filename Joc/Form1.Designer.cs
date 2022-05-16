@@ -37,6 +37,7 @@ namespace Joc
             this.label2 = new System.Windows.Forms.Label();
             this.ClasamentButton = new System.Windows.Forms.Button();
             this.buttonDate = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -131,6 +132,17 @@ namespace Joc
             this.buttonDate.UseVisualStyleBackColor = true;
             this.buttonDate.Click += new System.EventHandler(this.buttonDate_Click);
             // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button3.Location = new System.Drawing.Point(1109, 603);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(250, 55);
+            this.button3.TabIndex = 11;
+            this.button3.Text = "Schimbă background";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -139,6 +151,7 @@ namespace Joc
             this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.BackgroundImage = global::Joc.Properties.Resources.background;
             this.ClientSize = new System.Drawing.Size(1382, 793);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.buttonDate);
             this.Controls.Add(this.ClasamentButton);
             this.Controls.Add(this.label2);
@@ -166,6 +179,7 @@ namespace Joc
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button ClasamentButton;
         private System.Windows.Forms.Button buttonDate;
+        private System.Windows.Forms.Button button3;
     }
 }
 

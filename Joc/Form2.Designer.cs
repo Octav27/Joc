@@ -106,12 +106,14 @@ namespace Joc
             this.Player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Player.TabIndex = 0;
             this.Player.TabStop = false;
+            this.Player.Click += new System.EventHandler(this.Player_Click);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BackgroundImage = global::Joc.Properties.Resources.backgrounddetailed2;
             this.ClientSize = new System.Drawing.Size(1100, 627);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TextRestart);

@@ -61,6 +61,18 @@ namespace Joc
             Player.Location = new Point(0, 0);
             Player.BackColor = Color.Transparent;
 
+            int al = Form5.alegere;
+            switch (al)
+            {
+                case 0:
+                    this.BackgroundImage = Properties.Resources.backgrounddetailed2;
+                    break;
+                    case 1:
+                    this.BackgroundImage = Properties.Resources.backgroundPietre;
+
+                    break;
+            }
+
         }
         
         private void MainTimer(object sender, EventArgs e)
@@ -341,6 +353,11 @@ namespace Joc
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Player_Click(object sender, EventArgs e)
         {
 
         }

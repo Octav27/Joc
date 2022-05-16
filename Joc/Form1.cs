@@ -73,21 +73,25 @@ namespace Joc
 
         private void SetareJucator(object sender, FormClosingEventArgs e)
         {
+            
             int s_scor = Form2.getScor();
 
             if (s_scor > 0)
             {
-                string informatie = FormInregistrare.getNume();
-                informatie += ' ';
-                informatie += s_scor.ToString();
-                informatie += '\n';
-                File.AppendAllText(@"C:\\Users\\Octav\\source\\repos\\Joc\Joc\\Jucatori.txt", informatie);
+                //string informatie = FormInregistrare.getNume();
+                //informatie += ' ';
+               // informatie += s_scor.ToString();
+               // informatie += '\n';
+               // File.AppendAllText(@"C:\\Users\\Octav\\source\\repos\\Joc\Joc\\Jucatori.txt", informatie);
+                DataAcces da = new DataAcces();
+                da.introduJucator(FormInregistrare.getNume(), s_scor);
             }
 
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+
             FormClasament clas = new FormClasament();
             this.Hide();
             clas.ShowDialog();
@@ -100,6 +104,14 @@ namespace Joc
             FormDateAdmin datee = new FormDateAdmin();
             this.Hide();
             datee.ShowDialog();
+            this.Show();
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            Form5 backF = new Form5();
+            this.Hide();
+            backF.ShowDialog();
             this.Show();
         }
     }

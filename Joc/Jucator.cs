@@ -8,17 +8,17 @@ namespace Joc
 {
     class Jucator
     {
-        public int id, scor;
+        public int scor;
         public string numeJucator;
 
         
-        public string Informatie
+       /* public string Informatie
         {
             
             get
             {
-                return id.ToString() + " " +numeJucator+ " "+scor.ToString();
+                return numeJucator+ " "+scor.ToString();
             }
-        }
+        }*/
     }
 }

@@ -40,8 +40,12 @@ namespace Joc
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             if (comboBox1.SelectedIndex == 1)
             {
+            List<Jucator> jc = new List<Jucator>();
+            DataAcces da = new DataAcces();
+                jc = da.GetJucatori();
                 if (numeJucator.Text == "")
                 {
                     labelError.Text = "Numele trebuie să conțină caractere!";
@@ -56,7 +60,7 @@ namespace Joc
                 else
                 {
 
-                    if (new FileInfo(@"C:\\Users\\Octav\\source\\repos\\Joc\Joc\\Jucatori.txt").Length == 0)
+                    if (jc.Count == 0)
                     {
                         nume = numeJucator.Text;
                         this.Hide();
@@ -66,10 +70,10 @@ namespace Joc
                     }
 
                     bool notOk = false;
-                    foreach (string line in File.ReadLines(@"C:\\Users\\Octav\\source\\repos\\Joc\Joc\\Jucatori.txt"))
+                    foreach (Jucator line in jc)
                     {
-                        int index = line.IndexOf(' ');
-                        string numele = line.Substring(0, index);
+                      //  int index = line.numeJucator;
+                        string numele = line.numeJucator;
                         if (numele.Equals(numeJucator.Text))
                         {
                             labelError.Text = "Exista deja asa un jucator";
@@ -149,6 +153,7 @@ namespace Joc
                 numeJucator.Enabled = false;
                 numeJucator.Visible= false;
                 labelJucatorNume.Visible = false;
+                labelError.Visible = false;
 
                 //Activare
                 labelAdminNume.Visible = true;
@@ -176,6 +181,9 @@ namespace Joc
                 numeJucator.Enabled = true;
                 numeJucator.Visible = true;
                 labelJucatorNume.Visible = true;
+                labelError.Visible =true;
+
+
             }
         }
 

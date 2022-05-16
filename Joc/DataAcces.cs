@@ -95,7 +95,7 @@ namespace Joc
 
         }
 
-        public void introduJucator(int id, string nume, string parola)
+        public void introduJucator(string NumeJucator, int Scor)
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("JocDB")))
             {
@@ -104,8 +104,9 @@ namespace Joc
                 if (connection.State == ConnectionState.Open)
                 {
                     List<Jucator> jc = new List<Jucator>();
+                    jc.Add(new Jucator { numeJucator = NumeJucator, scor = Scor });
 
-                    connection.Query<Jucator>("dbo.Joc_stergeJucatori");
+                    connection.Execute("dbo.Joc_introduJucator @numeJucator, @scor", new {NumeJucator, Scor});
                 }
 
                 return;

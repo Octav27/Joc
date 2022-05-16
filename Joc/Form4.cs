@@ -27,28 +27,31 @@ namespace Joc
 
         }
 
-        private void AddIndexes()
+        private List<int> AddIndexes()
         {
+            List<int> nrs = new List<int>();
             int id = 1;
             for (int i= 0;i < jucatori.Count;i++)
             {
-                jucatori[i].id = id;
+                 nrs.Add(id);
                 id++;
             }
-           return;
+           return nrs;
         }
 
         private void FormDateAdmin_Load(object sender, EventArgs e)
         {
             DataAcces db = new DataAcces();
             jucatori = db.GetJucatori();
-            AddIndexes();
+            List<int> indexi = AddIndexes();
 
             List<string[]> rows = new List<string[]>();
+            int iaux = 0;
             foreach(Jucator j in jucatori)
             {
-                string[] aux = { j.id.ToString(), j.numeJucator, j.scor.ToString() };
+                string[] aux = {indexi[iaux].ToString(), j.numeJucator, j.scor.ToString() };
                 rows.Add(aux);
+                iaux++;
             }
 
             for(int i = 0; i<rows.Count; i++)
