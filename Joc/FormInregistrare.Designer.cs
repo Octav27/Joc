@@ -147,9 +147,11 @@ namespace Joc
             this.Controls.Add(this.numeJucator);
             this.Controls.Add(this.labelJucatorNume);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.KeyPreview = true;
             this.Name = "FormInregistrare";
             this.Text = "Inregistrare jucător";
             this.Load += new System.EventHandler(this.FormInregistrare_Load);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FormInregistrare_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
 

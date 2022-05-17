@@ -121,6 +121,7 @@ namespace Joc
             this.Controls.Add(this.Scor);
             this.Controls.Add(this.Viata);
             this.Controls.Add(this.Player);
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form2";
             this.Text = "Joaca";

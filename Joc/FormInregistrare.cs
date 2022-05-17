@@ -196,5 +196,104 @@ namespace Joc
         {
 
         }
+
+        private void FormInregistrare_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == (char)Keys.Enter)
+            {
+
+                if (comboBox1.SelectedIndex == 1)
+                {
+                    List<Jucator> jc = new List<Jucator>();
+                    DataAcces da = new DataAcces();
+                    jc = da.GetJucatori();
+                    if (numeJucator.Text == "")
+                    {
+                        labelError.Text = "Numele trebuie să conțină caractere!";
+                        labelError.ForeColor = Color.Red;
+                    }
+                    else if (numeJucator.Text.Contains(' '))
+                    {
+                        labelError.Text = "Numele nu trebuie să conțină spații!";
+                        labelError.ForeColor = Color.Red;
+
+                    }
+                    else
+                    {
+
+                        if (jc.Count == 0)
+                        {
+                            nume = numeJucator.Text;
+                            this.Hide();
+                            Form1 joc = new Form1();
+                            joc.ShowDialog();
+                            this.Close();
+                        }
+
+                        bool notOk = false;
+                        foreach (Jucator line in jc)
+                        {
+                            //  int index = line.numeJucator;
+                            string numele = line.numeJucator;
+                            if (numele.Equals(numeJucator.Text))
+                            {
+                                labelError.Text = "Exista deja asa un jucator";
+                                labelError.ForeColor = Color.Red;
+                                notOk = true;
+                            }
+                        }
+
+                        if (!notOk)
+                        {
+                            nume = numeJucator.Text;
+                            this.Hide();
+                            Form1 joc = new Form1();
+                            joc.ShowDialog();
+                            this.Close();
+                        }
+
+                    }
+                }
+                else if (comboBox1.SelectedIndex == 0)
+                {
+                    DataAcces db = new DataAcces();
+                    admini = db.GetAdmini();
+
+                    Admin user = new Admin();
+                    user.username = textBoxAdminNume.Text;
+                    user.parola = textBoxAdminParola.Text;
+
+                    //  bool conectareAdminReusita = false;
+
+                    foreach (Admin a in admini)
+                    {
+                        if (a.username == user.username && a.parola == user.parola)
+                        {
+                            conectareAdmin = true; break;
+                        }
+                    }
+
+                    if (conectareAdmin)
+                    {
+                        this.Hide();
+                        Form1 joc = new Form1();
+                        joc.ShowDialog();
+                        this.Close();
+                    }
+                    else
+                    {
+                        labelErrorAdmin.Text = "Ai introdus date incorecte!!!";
+                        labelErrorAdmin.ForeColor = Color.Red;
+                        textBoxAdminNume.Text = "";
+                        textBoxAdminParola.Text = "";
+
+                    }
+
+
+
+                }
+            }
+
+        }
     }
 }

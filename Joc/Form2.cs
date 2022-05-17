@@ -69,8 +69,21 @@ namespace Joc
                     break;
                     case 1:
                     this.BackgroundImage = Properties.Resources.backgroundPietre;
+                    break;
+                case 2:
+                    this.BackgroundImage = Properties.Resources.background3_png_preview;
 
                     break;
+                case 3:
+                    this.BackgroundImage = Properties.Resources.background4;
+                    break;
+
+                case 4:
+                    this.BackgroundImage = Properties.Resources.background5;
+                    break;
+
+
+
             }
 
         }

@@ -32,7 +32,7 @@ namespace Joc
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             comboBoxAlegere.SelectedIndex = alegere =1;
-            alegere = 1;
+            
 
         }
 
@@ -49,6 +49,21 @@ namespace Joc
         private void comboBoxAlegere_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            comboBoxAlegere.SelectedIndex = alegere = 2;
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            comboBoxAlegere.SelectedIndex = alegere = 3;
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            comboBoxAlegere.SelectedIndex = alegere = 4;
         }
     }
 }
