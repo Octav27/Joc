@@ -33,7 +33,6 @@ namespace Joc
             this.maiMulteDespreAutorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.facebookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.discordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -76,31 +75,16 @@ namespace Joc
             // facebookToolStripMenuItem
             // 
             this.facebookToolStripMenuItem.Name = "facebookToolStripMenuItem";
-            this.facebookToolStripMenuItem.Size = new System.Drawing.Size(155, 26);
+            this.facebookToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.facebookToolStripMenuItem.Text = "Facebook";
             this.facebookToolStripMenuItem.Click += new System.EventHandler(this.facebookToolStripMenuItem_Click);
             // 
             // discordToolStripMenuItem
             // 
             this.discordToolStripMenuItem.Name = "discordToolStripMenuItem";
-            this.discordToolStripMenuItem.Size = new System.Drawing.Size(155, 26);
+            this.discordToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.discordToolStripMenuItem.Text = "Discord";
             this.discordToolStripMenuItem.Click += new System.EventHandler(this.discordToolStripMenuItem_Click);
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.linkLabel1.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.linkLabel1.Location = new System.Drawing.Point(12, 568);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(233, 20);
-            this.linkLabel1.TabIndex = 2;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Informații despre autor";
-            this.linkLabel1.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             // 
             // groupBox1
             // 
@@ -284,9 +268,8 @@ namespace Joc
             this.Controls.Add(this.label12);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.menuStrip1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form3";
             this.Text = "Setari";
@@ -305,7 +288,6 @@ namespace Joc
 
         #endregion
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

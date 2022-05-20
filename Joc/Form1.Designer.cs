@@ -35,7 +35,6 @@ namespace Joc
             this.textBoxNume = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.ClasamentButton = new System.Windows.Forms.Button();
             this.buttonDate = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -110,17 +109,6 @@ namespace Joc
             this.label2.TabIndex = 8;
             this.label2.Text = "Terifiantul";
             // 
-            // ClasamentButton
-            // 
-            this.ClasamentButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ClasamentButton.Location = new System.Drawing.Point(1166, 694);
-            this.ClasamentButton.Name = "ClasamentButton";
-            this.ClasamentButton.Size = new System.Drawing.Size(193, 55);
-            this.ClasamentButton.TabIndex = 9;
-            this.ClasamentButton.Text = "Vezi clasamentul";
-            this.ClasamentButton.UseVisualStyleBackColor = true;
-            this.ClasamentButton.Click += new System.EventHandler(this.button3_Click);
-            // 
             // buttonDate
             // 
             this.buttonDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -135,7 +123,7 @@ namespace Joc
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button3.Location = new System.Drawing.Point(1109, 603);
+            this.button3.Location = new System.Drawing.Point(1109, 714);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(250, 55);
             this.button3.TabIndex = 11;
@@ -153,7 +141,6 @@ namespace Joc
             this.ClientSize = new System.Drawing.Size(1382, 793);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.buttonDate);
-            this.Controls.Add(this.ClasamentButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxNume);
@@ -177,7 +164,6 @@ namespace Joc
         private System.Windows.Forms.TextBox textBoxNume;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button ClasamentButton;
         private System.Windows.Forms.Button buttonDate;
         private System.Windows.Forms.Button button3;
     }

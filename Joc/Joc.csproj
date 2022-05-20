@@ -95,12 +95,6 @@
     <Compile Include="Form5.Designer.cs">
       <DependentUpon>Form5.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormClasament.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormClasament.Designer.cs">
-      <DependentUpon>FormClasament.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormInregistrare.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,9 +140,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form5.resx">
       <DependentUpon>Form5.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormClasament.resx">
-      <DependentUpon>FormClasament.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormInregistrare.resx">
       <DependentUpon>FormInregistrare.cs</DependentUpon>

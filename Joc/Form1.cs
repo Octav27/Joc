@@ -68,7 +68,11 @@ namespace Joc
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            /*
+             sd
+            sada
+            asd
+             */
         }
 
         private void SetareJucator(object sender, FormClosingEventArgs e)
@@ -89,15 +93,7 @@ namespace Joc
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
 
-            FormClasament clas = new FormClasament();
-            this.Hide();
-            clas.ShowDialog();
-            this.Show();
-
-        }
 
         private void buttonDate_Click(object sender, EventArgs e)
         {
