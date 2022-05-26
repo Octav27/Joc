@@ -82,7 +82,7 @@ namespace Joc
             this.listViewDate.TabIndex = 5;
             this.listViewDate.UseCompatibleStateImageBehavior = false;
             this.listViewDate.View = System.Windows.Forms.View.Details;
-            this.listViewDate.SelectedIndexChanged += new System.EventHandler(this.listViewDate_SelectedIndexChanged);
+         //   this.listViewDate.SelectedIndexChanged += new System.EventHandler(this.listViewDate_SelectedIndexChanged);
             // 
             // columnHeader1
             // 

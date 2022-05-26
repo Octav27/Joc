@@ -31,12 +31,12 @@ namespace Joc
         {
             List<int> nrs = new List<int>();
             int id = 1;
-            for (int i= 0;i < jucatori.Count;i++)
+            for (int i = 0; i < jucatori.Count; i++)
             {
-                 nrs.Add(id);
+                nrs.Add(id);
                 id++;
             }
-           return nrs;
+            return nrs;
         }
 
         private void FormDateAdmin_Load(object sender, EventArgs e)
@@ -47,19 +47,19 @@ namespace Joc
 
             List<string[]> rows = new List<string[]>();
             int iaux = 0;
-            foreach(Jucator j in jucatori)
+            foreach (Jucator j in jucatori)
             {
-                string[] aux = {indexi[iaux].ToString(), j.numeJucator, j.scor.ToString() };
+                string[] aux = { indexi[iaux].ToString(), j.numeJucator, j.scor.ToString() };
                 rows.Add(aux);
                 iaux++;
             }
 
-            for(int i = 0; i<rows.Count; i++)
+            for (int i = 0; i < rows.Count; i++)
             {
                 var listViewItem = new ListViewItem(rows[i]);
                 listViewDate.Items.Add(listViewItem);
             }
-           
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -75,7 +75,7 @@ namespace Joc
         {
             using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "Excel Workbook|*.xlsx", ValidateNames = true })
             {
-                if(sfd.ShowDialog() == DialogResult.OK)
+                if (sfd.ShowDialog() == DialogResult.OK)
                 {
                     Microsoft.Office.Interop.Excel.Application app = new Microsoft.Office.Interop.Excel.Application();
                     Workbook wb = app.Workbooks.Add(XlSheetType.xlWorksheet);
@@ -93,26 +93,27 @@ namespace Joc
                     int i = 4;
                     foreach (Jucator j in juc)
                     {
-                        ws.Cells[i, 1] = (i-3).ToString();
+                        ws.Cells[i, 1] = (i - 3).ToString();
                         ws.Cells[i, 2] = j.numeJucator;
                         ws.Cells[i, 3] = j.scor.ToString();
                         i++;
+
+                        i++;
+                        ws.Cells[i, 1] = "Data";
+
+                        ws.Cells[i, 2] = DateTime.Today.ToString("dd.MM.yyyy");
+                        ws.Cells[i + 2, 1] = "Semnatura";
+                        wb.SaveAs(sfd.FileName, XlFileFormat.xlWorkbookDefault, Type.Missing, true, false, XlSaveAsAccessMode.xlNoChange, (XlSaveAsAccessMode)XlSaveConflictResolution.xlLocalSessionChanges, Type.Missing, Type.Missing);
                     }
-                    i++;
-                    ws.Cells[i, 1] = "Data";
-                   
-                    ws.Cells[i, 2] = DateTime.Today.ToString("dd.MM.yyyy");
-                    ws.Cells[i+2, 1] = "Semnatura";
-                    wb.SaveAs(sfd.FileName, XlFileFormat.xlWorkbookDefault, Type.Missing, true, false, XlSaveAsAccessMode.xlNoChange, (XlSaveAsAccessMode)XlSaveConflictResolution.xlLocalSessionChanges, Type.Missing, Type.Missing);
-                    MessageBox.Show("Bravo");
+                        MessageBox.Show("Bravo");
                 }
+
             }
 
-        }
+           // private void listViewDate_SelectedIndexChanged(object sender, EventArgs e)
+            //{
 
-        private void listViewDate_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+//            }
         }
     }
 }
