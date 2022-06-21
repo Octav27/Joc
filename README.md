@@ -1,0 +1,2 @@
+# Aplicație de agrement ”Terifiantul”
+
